@@ -63,8 +63,8 @@ namespace OOP_II_Game.Properties {
         /// <summary>
         ///   Looks up a localized string similar to if not exists(select username from users where username = @UserName)
         ///begin
-        ///	insert into user(username,password,fullname,phonenumber,address,city,country,email)
-        ///	values(@username,@password,@fullname,@phonenumber,@address,@city,@country,e@mail)
+        ///	insert into users(username,password,fullname,phonenumber,address,city,country,email)
+        ///	values(@Username,@Password,@Fullname,@PhoneNumber,@Address,@City,@Country,@Email)
         ///end.
         /// </summary>
         internal static string InsertUser {
