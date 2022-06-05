@@ -102,7 +102,7 @@ namespace OOP_II_Game
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True"); // making connection   
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hasan\OneDrive\Masaüstü\OOP-II_Game\OOP_II_Game\OOP_II_Game\bin\Debug\Database.mdf;Integrated Security=True;Connect Timeout=30"); // making connection   
             SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Users WHERE username='" + loginUsernameText.Text + "' AND password='" + loginPasswordText.Text + "'", con);
             /* in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. */
             DataTable dt = new DataTable(); //this is creating a virtual table  
@@ -117,5 +117,6 @@ namespace OOP_II_Game
                 MessageBox.Show("Invalid username or password");
 
         }
+
     }
 }
