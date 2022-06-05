@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace OOP_II_Game
 {
@@ -97,6 +98,24 @@ namespace OOP_II_Game
             {
                 MessageBox.Show("Failed to Sign In", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True"); // making connection   
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Users WHERE username='" + loginUsernameText.Text + "' AND password='" + loginPasswordText.Text + "'", con);
+            /* in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. */
+            DataTable dt = new DataTable(); //this is creating a virtual table  
+            sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
+            {
+                /* I have made a new page called UserForm page. If the user is successfully authenticated then the form will be moved to the next form */
+                this.Hide();
+                new UserForm().Show();
+            }
+            else
+                MessageBox.Show("Invalid username or password");
+
         }
     }
 }
