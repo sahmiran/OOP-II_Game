@@ -48,7 +48,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonRegister = new System.Windows.Forms.Button();
+            this.loginUsernameText = new System.Windows.Forms.TextBox();
+            this.loginPasswordText = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.loginButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,15 +66,20 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(600, 450);
+            this.tabControl1.Size = new System.Drawing.Size(421, 347);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.loginButton);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.loginPasswordText);
+            this.tabPage1.Controls.Add(this.loginUsernameText);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(526, 341);
+            this.tabPage1.Size = new System.Drawing.Size(413, 318);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Log In";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -95,7 +106,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(592, 421);
+            this.tabPage2.Size = new System.Drawing.Size(413, 318);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sign In";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -239,15 +250,60 @@
             this.buttonRegister.UseVisualStyleBackColor = true;
             this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
+            // loginUsernameText
+            // 
+            this.loginUsernameText.Location = new System.Drawing.Point(97, 80);
+            this.loginUsernameText.Name = "loginUsernameText";
+            this.loginUsernameText.Size = new System.Drawing.Size(240, 22);
+            this.loginUsernameText.TabIndex = 0;
+            // 
+            // loginPasswordText
+            // 
+            this.loginPasswordText.Location = new System.Drawing.Point(97, 135);
+            this.loginPasswordText.Name = "loginPasswordText";
+            this.loginPasswordText.PasswordChar = '*';
+            this.loginPasswordText.Size = new System.Drawing.Size(240, 22);
+            this.loginPasswordText.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(24, 85);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 16);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Username";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(27, 140);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 16);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Password";
+            // 
+            // loginButton
+            // 
+            this.loginButton.Location = new System.Drawing.Point(187, 191);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(150, 31);
+            this.loginButton.TabIndex = 4;
+            this.loginButton.Text = "LOG IN";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 450);
+            this.ClientSize = new System.Drawing.Size(421, 347);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -276,6 +332,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox loginPasswordText;
+        private System.Windows.Forms.TextBox loginUsernameText;
     }
 }
 
