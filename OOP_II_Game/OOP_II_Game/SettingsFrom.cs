@@ -17,6 +17,9 @@ namespace OOP_II_Game
         public SettingsFrom()
         {
             InitializeComponent();
+            difficultyLabel.Text = Settings.Default["Difficulty"].ToString();
+            shapeLabel.Text = Settings.Default["Shape"].ToString();
+            colorLabel.Text = Settings.Default["Color"].ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
