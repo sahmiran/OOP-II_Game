@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OOP_II_Game.Properties;
 
 namespace OOP_II_Game
 {
@@ -15,6 +16,23 @@ namespace OOP_II_Game
         public UserForm()
         {
             InitializeComponent();
+            difficultyLabel.Text = Settings.Default["Difficulty"].ToString();
+            shapeLabel.Text = Settings.Default["Shape"].ToString();
+            colorLabel.Text = Settings.Default["Color"].ToString();
+        }
+
+        private void userSettingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsFrom settingsFrom = new SettingsFrom();
+            this.Hide();
+            settingsFrom.Show();
+        }
+
+        private void userExitButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form1 = new Form1();
+            form1.Show();
         }
     }
 }
