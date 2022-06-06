@@ -16,9 +16,7 @@ namespace OOP_II_Game
         public UserForm()
         {
             InitializeComponent();
-            difficultyLabel.Text = Settings.Default["Difficulty"].ToString();
-            shapeLabel.Text = Settings.Default["Shape"].ToString();
-            colorLabel.Text = Settings.Default["Color"].ToString();
+
         }
 
         private void userSettingsButton_Click(object sender, EventArgs e)
